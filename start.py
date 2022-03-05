@@ -77,7 +77,8 @@ def banner():
             error_line()
         else:
             with open('settings.yaml', 'r') as file_settings:
-                outputs = yaml.dump(worker, file_settings)
+                interfaces = yaml.load(file_settings, Loader=yaml.FullLoader)
+                print(interfaces)
                 line()
                 print()
                 sleep(1)
