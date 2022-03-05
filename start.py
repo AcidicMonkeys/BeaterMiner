@@ -77,7 +77,7 @@ def banner():
             error_line()
         else:
             settings = yaml.safe_load(open('settings.yaml'))
-            print(settings)
+            setting['worker']
             line()
             print()
             sleep(1)
