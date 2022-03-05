@@ -1,14 +1,12 @@
 {
     "autosave": true,
-    "donate-level": 5,
     "cpu": true,
     "opencl": false,
     "cuda": false,
     "pools": [
         {
-            "url": "pool.xmrfast.com:9000",
+            "url": "xmrpool.eu:9999",
             "user": "46Nb3ctGn87NLBxiGD26HqPp5HCwd761RQTopAVy44y6ftDYPwAz1jii6Fas3Gu378cqiz96ygjpVeN5Tk64NrC455AZFy2",
-            "pass": "Pepe",
             "keepalive": true,
             "tls": true
         }

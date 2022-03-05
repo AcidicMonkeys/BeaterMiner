@@ -24,6 +24,8 @@ from os import system, name
 from time import sleep
 from simple_chalk import chalk, greenBright, magentaBright, cyanBright, yellowBright, redBright, whiteBright
 import os.path
+import yaml
+from yaml.loader import SafeLoader
 
 # ////////////////| [🧪] - Constans
 
@@ -33,9 +35,6 @@ cyan = chalk.cyanBright
 yellow = chalk.yellowBright
 red = chalk.redBright
 white = chalk.whiteBright
-
-# ////////////////| [🍣] - Variables
-
 file_config = os.path.exists('config.json')
 
 # ////////////////| [❗] - Functions
@@ -62,7 +61,7 @@ def banner():
         error_line()
         print()
         sleep(1)
-        print(red('['), white('-'), red(']'), white('-'), white("You CAN'T run BeaterMiner on Windows, you MUST use a GNU/Linux OS!"))
+        print(red('['), white('!'), red(']'), white('-'), white("You CAN'T run BeaterMiner on Windows, you MUST use a GNU/Linux OS!"))
         sleep(1)
         print()
         error_line()
@@ -73,22 +72,31 @@ def banner():
             error_line()
             print()
             sleep(1)
-            print(red('['), white('-'), red(']'), white('-'), white("I couldn't find the configuration file (config.json) try making a new one on https://xmrig.com/wizard or please read the documentation."))
+            print(red('['), white('!'), red(']'), white('-'), white("I couldn't find the configuration file (config.json) try making a new one on https://xmrig.com/wizard or please read the documentation."))
             sleep(1)
             print()
             error_line()
         else:
-            line()
-            print()
-            sleep(1)
-            print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Welcome to BeaterMiner!'))
-            sleep(2)
-            print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Starting BeaterMiner...'))
-            sleep(3)
-            print()
-            line()
-            print()
-            start()
+            with open('settings.yaml') as file_settings:
+                data = yaml.load(file_settings, Loader=SafeLoader)
+                print(data)
+                """
+                line()
+                print()
+                sleep(1)
+                print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Welcome to BeaterMiner!'))
+                sleep(2)
+                print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Showing actual settings...'))
+                sleep(1)
+                
+                print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Starting BeaterMiner...'))
+                sleep(2)
+                print()
+                line()
+                sleep(2)
+                print()
+                start()
+                """
         
 def start():
     system('chmod +x ./beater')
