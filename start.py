@@ -24,8 +24,7 @@ from os import system, name
 from time import sleep
 from simple_chalk import chalk, greenBright, magentaBright, cyanBright, yellowBright, redBright, whiteBright
 import os.path
-import yaml
-from yaml.loader import SafeLoader
+from ruamel import yaml
 
 # ////////////////| [🧪] - Constans
 
@@ -66,7 +65,7 @@ def banner():
         print()
         error_line()
         sleep(2)
-        exit
+        exit 
     else:
         if file_config == False:
             error_line()
@@ -77,10 +76,8 @@ def banner():
             print()
             error_line()
         else:
-            with open('settings.yaml') as file_settings:
-                data = yaml.load(file_settings, Loader=SafeLoader)
-                print(data)
-                """
+            settings = yaml.safe_load(open('settings.yaml'))
+                print(settings)
                 line()
                 print()
                 sleep(1)
@@ -88,7 +85,6 @@ def banner():
                 sleep(2)
                 print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Showing actual settings...'))
                 sleep(1)
-                
                 print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Starting BeaterMiner...'))
                 sleep(2)
                 print()
@@ -96,7 +92,6 @@ def banner():
                 sleep(2)
                 print()
                 start()
-                """
         
 def start():
     system('chmod +x ./beater')
