@@ -75,9 +75,9 @@ def banner():
             print()
             error_line()
         else:
-            with open('settings.yaml') as f:
-                lines = f.readlines()
-                print(lines)
+            with open('settings.yaml') as file_settings:
+                settings = file_settings.readlines()
+                print(settings['worker'])
                 line()
                 print()
                 sleep(1)
