@@ -1,1 +1,3 @@
 simple-chalk
+yaml
+yaml.loader
