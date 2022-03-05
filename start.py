@@ -76,7 +76,7 @@ def banner():
             print()
             error_line()
         else:
-            with open('settings.yaml') as file_settings:
+            with open('settings.yaml', 'r') as file_settings:
                 print(yaml.full_load(file_settings))
                 line()
                 print()
