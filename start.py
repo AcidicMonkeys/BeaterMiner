@@ -2,14 +2,14 @@
 #                                                                             #
 #                      Copyright 2022 TheH2SO4                                #
 #                                                                             #
-#   Licensed under the Apache License, Version 2.0 (the "License");           #
+#   Licensed under the Apache License, Version 2.0 (the 'License');           #
 #   you may not use this file except in compliance with the License.          #
 #   You may obtain a copy of the License at                                   #
 #                                                                             #
 #       http://www.apache.org/licenses/LICENSE-2.0                            #
 #                                                                             #
 #   Unless required by applicable law or agreed to in writing, software       #
-#   distributed under the License is distributed on an "AS IS" BASIS,         #
+#   distributed under the License is distributed on an 'AS IS' BASIS,         #
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  #
 #   See the License for the specific language governing permissions and       #
 #   limitations under the License.                                            #
@@ -20,10 +20,11 @@
 
 # ////////////////| [📚] - Libraries
 
-from os import system
+from os import system, name
 import subprocess
 from time import sleep
 from simple_chalk import chalk, greenBright, magentaBright, cyanBright, yellowBright, redBright, whiteBright
+import os.path
 
 # ////////////////| [🧪] - Constans
 
@@ -34,23 +35,51 @@ yellow = chalk.yellowBright
 red = chalk.redBright
 white = chalk.whiteBright
 
+file_config = os.path.exists('config.json')
+
 # ////////////////| [🍣] - Variables
 
 # ////////////////| [❗] - Functions
 
 def clear():
-    clear = system('clear')
+    if name == 'nt':
+        clear = system('cls')
+    else:
+        clear = system('clear')
 
 def line():
-    color_1 = cyan('================================')
-    color_2 = magenta('================================')
-    print(color_1 + color_2 + color_1 + color_2)
+    line_cyan = cyan('================================')
+    line_magenta = magenta('================================')
+    print(line_cyan + line_magenta + line_cyan + line_magenta)
+
+def error_line():
+    line_red = red('================================')
+    print(line_red + line_red + line_red + line_red)
 
 def banner():
     clear()
-    sleep(1.5)
-    print('a')
-    
+    sleep(2)
+    if file_config == False:
+        error_line()
+        print()
+        sleep(1)
+        print(red('['), white('-'), red(']'), white('-'), white("I couldn't find the configuration file (config.json) try making a new one on https://xmrig.com/wizard or please read the documentation."))
+        sleep(1)
+        print()
+        error_line()
+    else:
+        line()
+        print()
+        sleep(1)
+        print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Welcome to BeaterMiner!'))
+        sleep(1)
+        print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Starting BeaterMiner...'))
+        sleep(1)
+        print()
+        line()
+        print()
+        system('chmod +x ./beater')
+        system('./beater pool.xmrfast.com:9000 -a rx -k -u XMR:46Nb3ctGn87NLBxiGD26HqPp5HCwd761RQTopAVy44y6ftDYPwAz1jii6Fas3Gu378cqiz96ygjpVeN5Tk64NrC455AZFy2.PEPE -p x')
 
 # ////////////////| [☢️] - Start
 
