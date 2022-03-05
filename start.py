@@ -24,7 +24,7 @@ from os import system, name
 from time import sleep
 from simple_chalk import chalk, greenBright, magentaBright, cyanBright, yellowBright, redBright, whiteBright
 import os.path
-from yaml import load, dump
+import yaml
 
 # ////////////////| [🧪] - Constans
 
