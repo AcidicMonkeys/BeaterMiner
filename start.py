@@ -24,6 +24,7 @@ from os import system, name
 from time import sleep
 from simple_chalk import chalk, greenBright, magentaBright, cyanBright, yellowBright, redBright, whiteBright
 import os.path
+import yaml
 
 # ////////////////| [🧪] - Constans
 
@@ -76,8 +77,8 @@ def banner():
             error_line()
         else:
             with open('settings.yaml') as file_settings:
-                settings = file_settings.readlines()
-                print(settings[6])
+                settings = yaml.safe_load(file_settings)
+                print(settings)
                 line()
                 print()
                 sleep(1)
