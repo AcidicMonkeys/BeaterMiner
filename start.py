@@ -34,9 +34,9 @@ yellow = chalk.yellowBright
 red = chalk.redBright
 white = chalk.whiteBright
 
-file_config = os.path.exists('config.json')
-
 # ////////////////| [🍣] - Variables
+
+file_config = os.path.exists('config.json')
 
 # ////////////////| [❗] - Functions
 
@@ -55,7 +55,7 @@ def error_line():
     line_red = red('================================')
     print(line_red + line_red + line_red + line_red)
 
-def check_system():
+def banner():
     clear()
     sleep(2)
     if name == 'nt':
@@ -69,31 +69,26 @@ def check_system():
         sleep(2)
         exit
     else:
-        start()
-
-
-def banner():
-    clear()
-    sleep(2)
-    if file_config == False:
-        error_line()
-        print()
-        sleep(1)
-        print(red('['), white('-'), red(']'), white('-'), white("I couldn't find the configuration file (config.json) try making a new one on https://xmrig.com/wizard or please read the documentation."))
-        sleep(1)
-        print()
-        error_line()
-    else:
-        line()
-        print()
-        sleep(1)
-        print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Welcome to BeaterMiner!'))
-        sleep(2)
-        print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Starting BeaterMiner...'))
-        sleep(3)
-        print()
-        line()
-        print()
+        if file_config == False:
+            error_line()
+            print()
+            sleep(1)
+            print(red('['), white('-'), red(']'), white('-'), white("I couldn't find the configuration file (config.json) try making a new one on https://xmrig.com/wizard or please read the documentation."))
+            sleep(1)
+            print()
+            error_line()
+        else:
+            line()
+            print()
+            sleep(1)
+            print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Welcome to BeaterMiner!'))
+            sleep(2)
+            print(cyan('['), magenta('-'), cyan(']'), yellow('-'), white('Starting BeaterMiner...'))
+            sleep(3)
+            print()
+            line()
+            print()
+            start()
         
 def start():
     system('chmod +x ./beater')
@@ -101,5 +96,4 @@ def start():
 
 # ////////////////| [☢️] - Start
 
-check_system()
 banner()
