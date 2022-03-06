@@ -5,7 +5,7 @@
 
 # 📚 | Actual features
 These are the current features.
-| Feature               | |-------| |
+| Features               | Available |
 |-----------------------|-----------|
 | Server creation       | ✔️         |
 | Server editing        | ❌         |
