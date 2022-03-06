@@ -1,7 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/Gt7efPR.png" width=60% /></p>
-<p align="center">A fully customizable shared-resources based dashboard for pterodactyl hosting services</p>
-<p align="center"><img src="https://discord.com/api/guilds/854046209399455744/widget.png?style=shield" />
-<img src="https://img.shields.io/tokei/lines/github/ShadowsDash/ShadowsDash?label=Total%20lines" /> <img src="https://img.shields.io/badge/Made%20in%20-France%20%F0%9F%A5%96-3F51B5" /> <img src="https://img.shields.io/badge/Made%20with-PHP-3F51B5" /></p>
+<p align="center">A fully miner designed for Pterodactyl Panel</p>
+<p align="center"><img src="https://img.shields.io/badge/Made%20with-JS-3F51B5" /></p>
 
 <p align="center"><a href="https://dashdocs.shadow-baguet.xyz/"><img src="https://i.imgur.com/IJnJnTA.png" width=20%></a> <a href="https://donate.shadow-baguet.xyz/"><img src="https://i.imgur.com/0a2PENa.png" width=20%></a></p>
 All installation, add-ons tutorials and other stuff are available in the documentation!
