@@ -2,12 +2,9 @@
 <p align="center">A fully miner designed for Pterodactyl Panel</p>
 <p align="center"><img src="https://img.shields.io/badge/Made%20with-JS-FFFB00" /></p>
 
-Mining in Pterodactyl has never been so easy!
+<p align="center">Mining in Pterodactyl has never been so easy!</p>
 
-# 👋 Services using ShadowsDash
-[OptikServers.com - Free 24/7 server hosting](https://my.optikservers.com)
-
-# 🗃️ Base features
+# 📚 | Actual features
 Theses features are the basic ones. In the future, more features are likely to come.
 | Feature               | Available |
 |-----------------------|-----------|
