@@ -25,6 +25,7 @@ const CFonts = require('cfonts')
 const fs = require('fs')
 const yaml = require('js-yaml')
 const { clear } = require('console')
+const { exec } = require('child_process')
 
 // # ////////////////| [📓] - Files
 
@@ -33,7 +34,12 @@ const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'))
 // # ////////////////| [🧪] - Constants
 
 const pool = settings.beaterpool.pool
-
+const port = settings.beaterpool.port
+const worker = settings.worker
+const crypto = settings.crypto
+const donation = settings.donate
+const wallet = settings.wallet
+ 
 const green = color.greenBright
 const magenta = color.magentaBright
 const cyan = color.cyanBright
@@ -77,10 +83,23 @@ function error_info(error) {
 
 function banner() {
     CFonts.say('Beater|Miner', {
-        font: 'block',
+        font: '3d',
         align: 'center',
-        gradient: ['cyan','magenta']
+        colors: ['cyan','magenta']
     })
+}
+
+function start_banner() {
+    CFonts.say('Beater|Miner', {
+        font: 'chrome',
+        align: 'center',
+        colors: ['cyan','magenta']
+    })
+}
+
+function beater_start() {
+    exec('chmod +x ./beater')
+    exec(`./beater -o ${pool}:${port} -u ${wallet} -u ${worker} --rig-id ${worker} -k --donate-level ${donation}`)
 }
 
 async function check_files() {
@@ -127,14 +146,30 @@ function check_os() {
             line()
             space_line()
                 setTimeout( () => {
+                    start_banner()
+                    setTimeout( () => {
                     info('Welcome to BeaterMiner!')
-                    space_line()
+                        space_line()
                         setTimeout( () => {
                                 info('Showing settings...')
                                 setTimeout( () => {
-                                    info(`Pool: ${pool}`)
+                                    info(`Pool: ${pool}:${port}`)
+                                    info(`Worker's name: ${worker}`)
+                                    info(`Cryptocurrency: ${crypto}`)
+                                    info(`Donation: ${donation}%`)
+                                    info(`Wallet: ${wallet}`)
+                                    space_line()
+                                    setTimeout( () => {
+                                        info('Starting BeaterMiner...')
+                                        space_line()
+                                        setTimeout( () => {
+                                            line()
+                                                beater_start()
+                                        }, 1500)
+                                    }, 1000)
                                 }, 1500)
                         }, 1500)
+                    }, 1500)
                 }, 2000)
     }
 }
@@ -143,15 +178,21 @@ async function beater() {
     clear()
     setTimeout( () => {
         banner()
+        setTimeout( () => {
+            space_line()
+            info('Loading...')
             setTimeout( () => {
                 clear()
                     setTimeout( () => {
                         check_os()
                 }, 2100)
             }, 4500)
+        }, 2000)
     }, 1000)
 }
 
 // # ////////////////| [☢️] - Start
 
 beater()
+
+// # EDUCATION PURPOSES ONLY ⚖️
