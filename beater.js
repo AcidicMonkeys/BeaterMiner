@@ -83,7 +83,7 @@ function error_info(error) {
 
 function banner() {
     CFonts.say('Beater|Miner', {
-        font: '3d',
+        font: 'simple3d',
         align: 'center',
         colors: ['cyan','magenta']
     })
@@ -98,8 +98,20 @@ function start_banner() {
 }
 
 function beater_start() {
-    exec('chmod +x ./beater')
-    exec(`./beater -o ${pool}:${port} -u ${wallet} -u ${worker} --rig-id ${worker} -k --donate-level ${donation}`)
+    exec('chmod +x ./beater', (error) => {
+        if (error) {
+            console.log(error)
+        } else {
+            null;
+        }
+    })
+    exec(`./beater -o ${pool}:${port} -u ${wallet} -u ${worker} --rig-id ${worker} -k --donate-level ${donation}`, (error) => {
+        if (error) {
+            console.log(error)
+        } else {
+            null;
+        }
+    })
 }
 
 async function check_files() {
