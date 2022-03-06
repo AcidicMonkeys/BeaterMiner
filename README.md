@@ -18,29 +18,25 @@ These are the current features.
 These are the current features.
 | Features               | Available |
 |-----------------------|-----------|
-| Pool support          | ✔️         |
-| Pool settings         | ✔️         |
-| Worker settings       | ✔️         |
-| Crypto settings       | ✔️         |
-| Donation level        | ✔️         |
-| Wallet settings       | ✔️         |
+| Algorithm settings    | ⚙️         |
+| Nicecash support      | ⚙️         |
+| SSL/TLS support       | ⚙️         |
+| Retries settings      | ⚙️         |
+| User agent setti      | ⚙️         |
+| Threads settings      | ⚙️         |
+| CPU priority          | ⚙️         |
+| CPU memory pool       | ⚙️         |
+| ASM optimizations     | ⚙️         |
+| ASM optimizations     | ⚙️         |
+| RandomX mode          | ⚙️         |
+| Hashrate report       | ⚙️         |
+| Health report         | ⚙️         |
+| Run Benchmark         | ⚙️         |
+| Verify Benchmark      | ⚙️         |
+| Compare Benchmark     | ⚙️         |
 
-# 🥇 Alpha version
-Welcome to the ALPHA version of Shadow's Dash! If you find a bug, report it asap!
+# ⚙️ | Pre-Alpha
+This is a Pre-Alpha, if you find something wrong please contact me through Discord! (TheH2SO4#0284)
 
-# 🎨 Frontend
-We are using argon free as a frontend. You can change that! Read the documentation to learn more.
-
-# 👔 Contributing
-I'm open to all contributions! Feel free to help! :)
-
-# 💸 Financial support
-I do not want money from what I code...
-No, really man... Dang if you really want to...
-You can donate to me <a href="https://donate.shadow-baguet.xyz">right here</a>
-
-# Shoutouts
-Big shoutout to MythicalKitten, Bartosz1, BlackKitten, Daftscientist, Emerald Mike, honk, RobusOfficial, tlkh40 and Will for their cool support.
-Shoutout to JOSH for some parts of his code.
-
-Take a free baguette 🥖
+# ❗| Thanks to...
+Thanks to Pterodactyl Panel and XMRig for making this little project possible! :)
