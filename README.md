@@ -1,12 +1,11 @@
 <p align="center"><img src="https://i.imgur.com/Gt7efPR.png" width=60% /></p>
-<p align="center">A fully miner designed for Pterodactyl Panel</p>
+<p align="center">A fully miner designed for Pterodactyl Panel.</p>
+<p align="center">Mining in Pterodactyl has never been so easy!</p>
 <p align="center"><img src="https://img.shields.io/badge/Made%20with-JS-FFFB00" /></p>
 
-<p align="center">Mining in Pterodactyl has never been so easy!</p>
-
 # 📚 | Actual features
-Theses features are the basic ones. In the future, more features are likely to come.
-| Feature               | Available |
+These are the current features.
+| Feature               | |-------| |
 |-----------------------|-----------|
 | Server creation       | ✔️         |
 | Server editing        | ❌         |
