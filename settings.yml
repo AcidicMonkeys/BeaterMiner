@@ -7,9 +7,9 @@ beaterpool:
   port: '9999' # Pool's port. Ej: 9999 (This will depend on the pool that you have choosen.)
 
 # BeaterMiner settings
-  - # Worker settings
+# Worker settings
 worker: 'TheH2SO4' # Worker's name. Ej: TheH2SO4 (This will be used as an identifier.)
-  - # Cryptocurrency settings
+# Cryptocurrency settings
 crypto: 'XMR' # What cryptocurrency would you like to mine? Ej: XMR (Depends on your pool too.)
-  - # Wallet settings
+# Wallet settings
 wallet: '46Nb3ctGn87NLBxiGD26HqPp5HCwd761RQTopAVy44y6ftDYPwAz1jii6Fas3Gu378cqiz96ygjpVeN5Tk64NrC455AZFy2' # Introduce your wallet. Ej: 46Nb3ctGn87NLBxiGD26HqP...
