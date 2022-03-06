@@ -7,19 +7,23 @@
 These are the current features.
 | Features               | Available |
 |-----------------------|-----------|
-| Server creation       | ✔️         |
-| Server editing        | ❌         |
-| Server deletion       | ✔️         |
-| Panel credentials     | ✔️         |
-| Login                 | ✔️         |
-| Registering           | ✔️         |
-| Discord oAuth handler | ✔️         |
-| Queue system          | ✔️         |
-| Earning coins         | ✔️ (Selection Menu) |
-| Resources shop        | ❌         |
-| Full customization    | ✔️         |
-| Full navbar control   | ✔️         |
-| Full login control    | ✔️         |
+| Pool support          | ✔️         |
+| Pool settings         | ✔️         |
+| Worker settings       | ✔️         |
+| Crypto settings       | ✔️         |
+| Donation level        | ✔️         |
+| Wallet settings       | ✔️         |
+
+# ❗ | Future features
+These are the current features.
+| Features               | Available |
+|-----------------------|-----------|
+| Pool support          | ✔️         |
+| Pool settings         | ✔️         |
+| Worker settings       | ✔️         |
+| Crypto settings       | ✔️         |
+| Donation level        | ✔️         |
+| Wallet settings       | ✔️         |
 
 # 🥇 Alpha version
 Welcome to the ALPHA version of Shadow's Dash! If you find a bug, report it asap!
