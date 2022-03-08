@@ -45,7 +45,7 @@ const cyan = color.cyanBright
 const yellow = color.yellowBright
 const red = color.redBright
 const white = color.whiteBright
-file_configuration = fs.existsSync('./configjson')
+const file_configuration = fs.existsSync('./configjson')
 
 // # ////////////////| [🍣] - Variables
 
@@ -107,7 +107,7 @@ function beater_start() {
 }
 
 async function check_files() {
-    if (file_configuration === false) {
+    if (file_configuration == false) {
         await fs.writeFile('./config.json', 
         `{
             "autosave": true,
@@ -126,6 +126,8 @@ async function check_files() {
                 if (error)
                     null;
                 })
+    } else {
+        null;
     }
 }
 
