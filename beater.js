@@ -45,7 +45,7 @@ const cyan = color.cyanBright
 const yellow = color.yellowBright
 const red = color.redBright
 const white = color.whiteBright
-const file_configuration = fs.existsSync('./configjson')
+file_configuration = fs.existsSync('./configjson')
 
 // # ////////////////| [🍣] - Variables
 
