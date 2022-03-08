@@ -103,7 +103,7 @@ function beater_start() {
         if (error) {
             console.log(error)
         } else {
-            shell.exec(`./beater ${pool}:${port} -u ${wallet} --rig-id ${worker} --donate-level ${donation} -a rx -k`)
+            shell.exec(`./beater -u ${wallet} --rig-id ${worker} --donate-level ${donation} -a rx -k`)
         }
     })
 }
@@ -124,15 +124,15 @@ async function check_files() {
                     "tls": true
                 }
             ]
-        }`, function (err) {
-                if (err)
+        }`, function (error) {
+                if (error)
                     null;
                 })
     }
 }
 
 function check_os() {
-    if (os == 'a') {
+    if (os == 'win32') {
         space_line()
         error_line()
         space_line()
@@ -159,7 +159,6 @@ function check_os() {
                         setTimeout( () => {
                                 info('Showing settings...')
                                 setTimeout( () => {
-                                    info(`Pool: ${pool}:${port}`)
                                     info(`Worker's name: ${worker}`)
                                     info(`Cryptocurrency: ${crypto}`)
                                     info(`Donation: ${donation}%`)

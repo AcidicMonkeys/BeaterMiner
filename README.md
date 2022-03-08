@@ -7,8 +7,6 @@
 These are the current features.
 | Features               | Available |
 |-----------------------|-----------|
-| Pool support          | ✔️         |
-| Pool settings         | ✔️         |
 | Worker settings       | ✔️         |
 | Crypto settings       | ✔️         |
 | Donation level        | ✔️         |

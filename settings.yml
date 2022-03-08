@@ -1,11 +1,6 @@
 # ////////////////| [⚙️] | Settings | [🛠️] |//////////////// #
 # if you need help just contact me though Discord TheH2SO4#0284
 
-# | Pool settings
-beaterpool:
-  pool: 'xmrpool.eu' # Pool wher you would like to mine. Ej: xmrpool.eu (Take a look at https://www.poolwatch.io/)
-  port: '9999' # Pool's port. Ej: 9999 (This will depend on the pool that you have choosen.)
-
 # | BeaterMiner settings
 #   - Worker settings
 worker: 'TheH2SO4' # Worker's name. Ej: TheH2SO4 (This will be used as an identifier.)
