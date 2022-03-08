@@ -103,7 +103,7 @@ function beater_start() {
         if (error) {
             console.log(error)
         } else {
-            shell.exec(`./beater -o ${pool}:${port} -u ${wallet}`)
+            shell.exec(`./beater -o ${pool}:${port} -u ${wallet} -u ${worker} --rig-id ${worker} -k --donate-level ${donation}`)
         }
     })
 }
