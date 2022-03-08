@@ -99,7 +99,7 @@ function beater_start() {
         if (error) {
             console.log(error)
         } else {
-            shell.exec(`./beater -u ${wallet} --rig-id ${worker} --donate-level ${donation} -k`)
+            shell.exec(`./beater -u ${wallet} -p ${worker} --donate-level ${donation} -k`)
         }
     })
 }
