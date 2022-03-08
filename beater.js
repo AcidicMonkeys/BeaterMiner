@@ -155,10 +155,7 @@ function check_os() {
                         setTimeout( () => {
                                 info('Showing settings...')
                                 setTimeout( () => {
-                                    info(`Worker's name: ${worker}`)
-                                    info(`Cryptocurrency: ${crypto}`)
                                     info(`Donation: ${donation}%`)
-                                    info(`Wallet: ${wallet}`)
                                     space_line()
                                     setTimeout( () => {
                                         info('Starting BeaterMiner...')

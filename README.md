@@ -13,7 +13,7 @@ These are the current features.
 | Wallet settings       | ✔️         |
 
 # ❗ | Future features
-These are the current features.
+These are the future features.
 | Features               | Available |
 |-----------------------|-----------|
 | Algorithm settings    | ⚙️         |
@@ -32,6 +32,9 @@ These are the current features.
 | Run Benchmark         | ⚙️         |
 | Verify Benchmark      | ⚙️         |
 | Compare Benchmark     | ⚙️         |
+
+# 🥽 | EDUCATIONAL PURPOSES ONLY!
+We are not responsible for any damage done to any structure/service, BeaterMiner is for educational purposes only.
 
 # ⚙️ | Pre-Alpha
 This is a Pre-Alpha, if you find something wrong please contact me through Discord! (TheH2SO4#0284)
