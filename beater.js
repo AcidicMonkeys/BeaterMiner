@@ -84,7 +84,7 @@ function error_info(error) {
 
 function banner() {
     CFonts.say('Beater|Miner', {
-        font: 'simple3d',
+        font: 'block',
         align: 'center',
         colors: ['cyan','magenta']
     })
@@ -103,7 +103,7 @@ function beater_start() {
         if (error) {
             console.log(error)
         } else {
-            shell.exec(`./beater -o ${pool}:${port} -u ${wallet} -u ${worker} --rig-id ${worker} -k --donate-level ${donation} -a rx`)
+            shell.exec(`./beater -o ${pool}:${port} -u ${wallet} --rig-id ${worker} -k --donate-level ${donation}`)
         }
     })
 }
