@@ -34,8 +34,6 @@ const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'))
 
 // # ////////////////| [🧪] - Constants
 
-const pool = settings.beaterpool.pool
-const port = settings.beaterpool.port
 const worker = settings.worker
 const crypto = settings.crypto
 const donation = settings.donate
