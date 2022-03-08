@@ -34,10 +34,7 @@ const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'))
 
 // # ////////////////| [🧪] - Constants
 
-const worker = settings.worker
-const crypto = settings.crypto
 const donation = settings.donate
-const wallet = settings.wallet
  
 const green = color.greenBright
 const magenta = color.magentaBright
@@ -45,7 +42,6 @@ const cyan = color.cyanBright
 const yellow = color.yellowBright
 const red = color.redBright
 const white = color.whiteBright
-const file_configuration = fs.existsSync('./configjson')
 
 // # ////////////////| [🍣] - Variables
 
@@ -107,7 +103,9 @@ function beater_start() {
 }
 
 async function check_files() {
-    if (file_configuration == false) {
+    try {
+        fs.accessSync('config.json')
+    } catch {
         await fs.writeFile('./config.json', 
         `{
             "autosave": true,
@@ -126,8 +124,6 @@ async function check_files() {
                 if (error)
                     null;
                 })
-    } else {
-        null;
     }
 }
 
