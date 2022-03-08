@@ -34,6 +34,8 @@ const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'))
 
 // # ////////////////| [🧪] - Constants
 
+const wallet = settings.wallet
+const worker = settings.worker
 const donation = settings.donate
  
 const green = color.greenBright
@@ -114,8 +116,10 @@ async function check_files() {
             "cuda": false,
             "pools": [
                 {
-                    "url": "xmrpool.eu:9999",
-                    "user": "46Nb3ctGn87NLBxiGD26HqPp5HCwd761RQTopAVy44y6ftDYPwAz1jii6Fas3Gu378cqiz96ygjpVeN5Tk64NrC455AZFy2",
+                    "algo": "astrobwt",
+                    "url": "dero.herominers.com:10121",
+                    "user": "dERoRxZ3HjZDsY5m2ws9HJ71cQJKuZ3cn268rrxj5vYD6Qj4itwb8GUa9RgGAxxoAJFJMki68mMoY9yTUunJ7H4K28j8tdfA5P",
+                    "pass": "Pepe",
                     "keepalive": true,
                     "tls": true
                 }
