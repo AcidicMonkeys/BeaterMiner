@@ -13,7 +13,7 @@ These are the current features.
 
 # ❗ | Future features
 These are the future features.
-| Features               | Available |
+| Features               | Future |
 |-----------------------|-----------|
 | Algorithm settings    | ⚙️         |
 | Nicecash support      | ⚙️         |
