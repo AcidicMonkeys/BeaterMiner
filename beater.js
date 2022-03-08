@@ -98,7 +98,7 @@ function start_banner() {
 }
 
 function beater_start() {
-    exec('chmod +x ./beater', (error) => {
+    exec('chmod +x beater', (error) => {
         if (error) {
             console.log(error)
         } else {
