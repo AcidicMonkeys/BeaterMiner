@@ -31,6 +31,7 @@ These are the future features.
 | Run Benchmark         | ⚙️         |
 | Verify Benchmark      | ⚙️         |
 | Compare Benchmark     | ⚙️         |
+| Pterodactyl Egg       | ⚙️         |
 
 # 🥽 | EDUCATIONAL PURPOSES ONLY!
 We are not responsible for any damage done to any structure/service, BeaterMiner is for educational purposes only.
