@@ -1,15 +1,16 @@
 <p align="center"><img src="https://i.imgur.com/Gt7efPR.png" width=60% /></p>
-<p align="center">Mining in Pterodactyl has never been so easy!</p>
+<p align="center">A full miner designed for Pterodactyl Panel.</p>
 <p align="center"><img src="https://img.shields.io/badge/Made%20with-JS-FFFB00" /></p>
 
 # 📚 | Actual features
 These are the current features.
-| Features               | Available |
+| Features               | Current |
 |-----------------------|-----------|
 | Worker settings       | ✔️         |
 | Crypto settings       | ✔️         |
 | Donation level        | ✔️         |
 | Wallet settings       | ✔️         |
+| SSL/TLS support       | ✔️         |
 
 # ❗ | Future features
 These are the future features.
@@ -17,13 +18,12 @@ These are the future features.
 |-----------------------|-----------|
 | Algorithm settings    | ⚙️         |
 | Nicecash support      | ⚙️         |
-| SSL/TLS support       | ⚙️         |
+| Discord Webhook       | ⚙️         |
 | Retries settings      | ⚙️         |
-| User agent setti      | ⚙️         |
+| Agent settings        | ⚙️         |
 | Threads settings      | ⚙️         |
 | CPU priority          | ⚙️         |
 | CPU memory pool       | ⚙️         |
-| ASM optimizations     | ⚙️         |
 | ASM optimizations     | ⚙️         |
 | RandomX mode          | ⚙️         |
 | Hashrate report       | ⚙️         |
