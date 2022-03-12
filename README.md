@@ -11,6 +11,7 @@ These are the current features.
 | Donation level        | ✔️         |
 | Wallet settings       | ✔️         |
 | SSL/TLS support       | ✔️         |
+| XMRig version settings| ✔️         |
 
 # ❗ | Future features
 These are the future features.
