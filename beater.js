@@ -173,6 +173,7 @@ async function check_files() {
         await fs.writeFile('./config.json', 
         `{
             "autosave": true,
+            "donate-level": 2,
             "cpu": true,
             "opencl": false,
             "cuda": false,
@@ -221,6 +222,8 @@ function check_os() {
                         setTimeout( () => {
                                 info('Showing settings...')
                                 setTimeout( () => {
+                                    info(`Wallet: ${wallet}`)
+                                    info(`Worker's rig's ID: ${worker}`)
                                     info(`Donation: ${donation}%`)
                                     info(`XMRig version: ${version}`)
                                     space_line()
