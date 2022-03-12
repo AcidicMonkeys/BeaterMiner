@@ -119,8 +119,40 @@ function beater_version() {
                     }, 3500)
             }
         })
+    } else if (version === '6.16.3') {
+        exec(`cp /home/container/beaters/6.16.3 /home/container`, (error) => {
+            if (error) {
+                console.log(error)
+            } else {
+                setTimeout( () => {
+                    shell.exec(`mv 6.16.3 beater`)
+                }, 2500)
+                    setTimeout( () => {
+                        beater_start()
+                    }, 3500)
+            }
+        })
+    } else if (version === '6.16.2') {
+        exec(`cp /home/container/beaters/6.16.2 /home/container`, (error) => {
+            if (error) {
+                console.log(error)
+            } else {
+                setTimeout( () => {
+                    shell.exec(`mv 6.16.2 beater`)
+                }, 2500)
+                    setTimeout( () => {
+                        beater_start()
+                    }, 3500)
+            }
+        })
     } else {
-        error_info(`${version} is not a supported version!`)
+        space_line()
+        setTimeout( () => {
+            error_info(`${version} is not a supported version!`)
+            setTimeout( () => {
+                space_line()
+            }, 1500)
+        }, 2000)
     }
 }
 
