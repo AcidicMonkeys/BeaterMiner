@@ -37,6 +37,10 @@ const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'))
 const wallet = settings.wallet
 const worker = settings.worker
 const donation = settings.donate
+const version = settings.xmrig.version
+
+const current_version = '6.16.4'
+const current = 'current'
  
 const green = color.greenBright
 const magenta = color.magentaBright
@@ -92,6 +96,32 @@ function start_banner() {
         align: 'center',
         colors: ['cyan','magenta']
     })
+}
+
+function beater_version() {
+    exec('rm -rf beater', (error) => {
+        if (error) {
+            null;
+        } else {
+            null;
+        }
+    })
+    if (version === current) {
+        exec(`cp /home/container/beaters/${current_version} /home/container`, (error) => {
+            if (error) {
+                console.log(error)
+            } else {
+                setTimeout( () => {
+                    shell.exec(`mv ${current_version} beater`)
+                }, 2500)
+                    setTimeout( () => {
+                        beater_start()
+                    }, 3500)
+            }
+        })
+    } else {
+        error_info(`${version} is not a supported version!`)
+    }
 }
 
 function beater_start() {
@@ -160,13 +190,14 @@ function check_os() {
                                 info('Showing settings...')
                                 setTimeout( () => {
                                     info(`Donation: ${donation}%`)
+                                    info(`XMRig version: ${version}`)
                                     space_line()
                                     setTimeout( () => {
                                         info('Starting BeaterMiner...')
                                         space_line()
                                         setTimeout( () => {
                                             line()
-                                                beater_start()
+                                                beater_version()
                                         }, 1500)
                                     }, 1000)
                                 }, 1500)

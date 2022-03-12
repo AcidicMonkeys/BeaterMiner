@@ -10,3 +10,7 @@ wallet: 'dERoRxZ3HjZDsY5m2ws9HJ71cQJKuZ3cn268rrxj5vYD6Qj4itwb8GUa9RgGAxxoAJFJMki
 worker: 'TheH2SO4MINER' # Worker's rig's ID. Ej: TheH2SO4MINER
 # | BeaterMiner settings
 donate: '5' # What you want to donate. Ej: 5 (Set to 0 if you don't want to donate)
+# | XMRig settings
+xmrig:
+  version: 'current' # What version of XMRig would you like to run. Ej: current
+  # > Available versions: current, 6.16.3, 6.16.2
