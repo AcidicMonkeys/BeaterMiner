@@ -37,8 +37,8 @@ These are the future features.
 # 🥽 | EDUCATIONAL PURPOSES ONLY!
 We are not responsible for any damage done to any structure/service, BeaterMiner is for educational purposes only.
 
-# ⚙️ | Pre-Alpha
-This is a Pre-Alpha, if you find something wrong please contact me through Discord! (TheH2SO4#0284)
+# ⚙️ | Beta
+This is a Beta version, if you find something wrong please contact me through Discord! (TheH2SO4#0284)
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel and XMRig for making this little project possible! :)
