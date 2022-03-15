@@ -27,6 +27,7 @@ const yaml = require('js-yaml')
 const { clear } = require('console')
 const { exec } = require('child_process')
 const shell = require('shelljs')
+const fetch = require('node-fetch')
 
 // # ////////////////| [📓] - Files
 
@@ -96,6 +97,29 @@ function start_banner() {
         align: 'center',
         colors: ['cyan','magenta']
     })
+}
+
+const fetchJson = (url, options) => new Promise(async (resolve, reject) => {
+    fetch(url, options)
+        .then(response => response.json())
+        .then(json => {
+            resolve(json)
+        })
+        .catch((err) => {
+            reject(err)
+        })
+})
+
+async function check_update() {
+    api = await fetchJson('https://api.xmrig.com/1/latest_release/xmrig')
+        if (`${api.version}` === `${current_version}`) {
+            null;
+        } else {
+            space_line()
+                setTimeout( () => {
+                    error_info(`There is a new XMRig version ${api.version} make sure you update BeaterMiner!`)
+                }, 1500)
+        }
 }
 
 function beater_version() {
@@ -218,25 +242,28 @@ function check_os() {
                     start_banner()
                     setTimeout( () => {
                     info('Welcome to BeaterMiner!')
-                        space_line()
+                        check_update()
                         setTimeout( () => {
-                                info('Showing settings...')
-                                setTimeout( () => {
-                                    info(`Wallet: ${wallet}`)
-                                    info(`Worker's rig's ID: ${worker}`)
-                                    info(`Donation: ${donation}%`)
-                                    info(`XMRig version: ${version}`)
-                                    space_line()
+                            space_line()
+                            setTimeout( () => {
+                                    info('Showing settings...')
                                     setTimeout( () => {
-                                        info('Starting BeaterMiner...')
+                                        info(`Wallet: ${wallet}`)
+                                        info(`Worker's rig's ID: ${worker}`)
+                                        info(`Donation: ${donation}%`)
+                                        info(`XMRig version: ${version}`)
                                         space_line()
                                         setTimeout( () => {
-                                            line()
-                                                beater_version()
-                                        }, 1500)
-                                    }, 1000)
-                                }, 1500)
-                        }, 1500)
+                                            info('Starting BeaterMiner...')
+                                            space_line()
+                                            setTimeout( () => {
+                                                line()
+                                                    beater_version()
+                                            }, 1500)
+                                        }, 1000)
+                                    }, 1500)
+                            }, 1500)
+                        }, 4500)
                     }, 1500)
                 }, 2000)
     }
