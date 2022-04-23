@@ -290,4 +290,4 @@ async function beater() {
 
 beater()
 
-// # EDUCATION PURPOSES ONLY 🥽
+// # EDUCATIONAL PURPOSES ONLY 🥽
