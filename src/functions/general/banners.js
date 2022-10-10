@@ -17,3 +17,27 @@
 // # /////////////////////////////////////////////////////////////////////////// # //
 
 // # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// # //
+
+// # ////////////////| Libraries |////////////////
+
+const CFonts = require('cfonts');
+const chalk = require('chalk');
+
+// # ////////////////| Start |////////////////
+
+function bannerStart(bannerName) {
+    CFonts.say(bannerName, {
+        font: 'block',
+        align: 'center',
+        colors: ['cyan','magenta'],
+        gradient: true,
+        background: 'transparent',
+        space: true,
+        transitionGradient: true,
+        env: 'node'
+    });
+}
+
+module.exports = {
+    bannerStart: bannerStart
+};
