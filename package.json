@@ -1,8 +1,8 @@
 {
-    "name": "beaterminer",
+    "name": "BeaterMiner",
     "homepage": "https://github.com/AcidicMonkeys/BeaterMiner#readme",
-    "version": "1.0.2",
-    "main": "beater.js",
+    "version": "1.0.0",
+    "main": "index.js",
     "author": {
         "name": "TheH2SO4",
         "email": "theh2so4@protonmail.com"
@@ -12,11 +12,11 @@
         "url": "git+https://github.com/AcidicMonkeys/BeaterMiner.git"
     },
     "engines": {
-        "node": "17.x.x",
+        "node": "16.x.x",
         "npm": "8.x.x"
     },
     "scripts": {
-        "start": "node beater.js"
+        "start": "node index.js"
     },
     "dependencies": {
         "chalk": "^4.1.1",
