@@ -42,3 +42,6 @@ This is a Beta version, if you find something wrong please contact me through Di
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel and XMRig for making this little project possible! :)
+
+# ❌| DEPRECATED.
+Re-write starting soon.
