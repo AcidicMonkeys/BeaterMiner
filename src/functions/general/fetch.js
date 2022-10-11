@@ -20,24 +20,23 @@
 
 // # ////////////////| Libraries |////////////////
 
-const CFonts = require('cfonts');
-const chalk = require('chalk');
+const fetch = require('node-fetch');
 
 // # ////////////////| Start |////////////////
 
-function bannerStart(bannerName) {
-    CFonts.say(bannerName, {
-        font: 'block',
-        align: 'center',
-        colors: ['cyan','magenta'],
-        gradient: true,
-        background: 'transparent',
-        space: true,
-        transitionGradient: true,
-        env: 'node'
-    });
+function fetchJson(url, options) {
+    const fetchJson = (url, options) => new Promise(async (resolve, reject) => {
+        fetch(url, options)
+            .then(response => response.json())
+            .then(json => {
+                resolve(json)
+            })
+            .catch((err) => {
+                reject(err)
+            });
+    });  
 };
 
 module.exports = {
-    bannerStart: bannerStart
+    fetchJson: fetchJson
 };
