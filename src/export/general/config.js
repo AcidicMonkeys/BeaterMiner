@@ -25,7 +25,7 @@ const yaml = require('js-yaml');
 
 // # ////////////////| Local files |////////////////
 
-const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8')) // # Load settings.yml
+const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8')); // # Load settings.yml
 
 // # ////////////////| Start |////////////////
 

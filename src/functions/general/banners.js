@@ -38,6 +38,6 @@ function bannerStart(bannerName) {
     });
 };
 
-module.exports = {
+module.exports = { // Exporting bannerStart
     bannerStart: bannerStart
 };
